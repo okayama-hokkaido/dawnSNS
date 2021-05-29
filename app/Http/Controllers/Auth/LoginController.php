@@ -41,12 +41,11 @@ class LoginController extends Controller
 
     public function login(Request $request){
         if($request->isMethod('post')){
-
             $data=$request->only('mail','password');
             // ログインが成功したら、トップページへ
             //↓ログイン条件は公開時には消すこと
             if(Auth::attempt($data)){
-                return redirect('/top');
+                return redirect('/top')->withInput();
             }
         }
         return view("auth.login");
