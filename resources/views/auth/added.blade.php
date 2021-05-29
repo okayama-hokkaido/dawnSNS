@@ -1,9 +1,8 @@
 @extends('layouts.logout')
 
 @section('content')
-
 <div id="clear">
-<p>さん、</p>
+<p>{{ $name }}さん、</p>
 <p>ようこそ！DAWNSNSへ！</p>
 <p>ユーザー登録が完了しました。</p>
 <p>さっそく、ログインをしてみましょう。</p>
