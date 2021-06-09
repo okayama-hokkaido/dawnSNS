@@ -23,13 +23,13 @@
     <header>
         <div id = "head">
         <h1><a href="/top"><img src="images/main_logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>{{ $username['username'] }}さん<img src="images/arrow.png"></p>
+            <div id="acdn-container">
+                <div class="acdn-title">
+                    <p class="acdn-btn">{{ $user['username'] }}さん<img src="images/dawn.png" id="profile-icon"></p>
                 <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
+                <ul class="acdn-content">
+                    <li"><a href="/top">HOME</a></li>
+                    <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>{{ $username['username'] }}さんの</p>
+                <p>{{ $user['username'] }}さんの</p>
                 <div>
                 <p>フォロー数</p>
                 <p>〇〇名</p>
@@ -58,7 +58,7 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+    <script src=""></script>
+    <script src=""></script>
 </body>
 </html>

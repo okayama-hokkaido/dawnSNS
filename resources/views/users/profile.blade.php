@@ -2,6 +2,28 @@
 
 @section('content')
 
+{!! Form::open() !!}
 
+<img src="images/dawn.png" id="profile-icon"></img>
+{{ Form::label('UserName') }}
+{{ Form::text('username',$user['username'],['class' => 'input']) }}
+<br>
+{{ Form::label('MailAddress') }}
+{{ Form::text('mail',$user['mail'],['class' => 'input']) }}
+<br>
+{{ Form::label('Password') }}
+{{ Form::text('password',$user['password'],['readonly']) }}
+<br>
+{{ Form::label('new Password') }}
+{{ Form::text('passwordConfirm',null,['class' => 'input']) }}
+<br>
+{{ Form::label('Bio') }}
+{{ Form::textarea('bio',null,['class' => 'input']) }}
+<br>
+{{ Form::label('Icon Image') }}
+{{ Form::file('images') }}
+<br>
+{{ Form::submit('更新') }}
+{!! Form::close() !!}
 
 @endsection
