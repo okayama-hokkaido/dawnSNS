@@ -25,11 +25,11 @@
         <h1><a href="/top"><img src="images/main_logo.png"></a></h1>
             <div id="acdn-container">
                 <div class="acdn-title">
-                    <p class="acdn-btn">{{ $user['username'] }}さん<img src="images/dawn.png" id="profile-icon"></p>
+                    <p class="acdn-btn">{{ $user['username'] }}さん<img src="images/{{$user['images']}}" id="profile-icon"></p>
                 <div>
                 <ul class="acdn-content">
                     <li"><a href="/top">HOME</a></li>
-                    <li><a href="/profile">プロフィール編集</a></li>
+                    <li><a href="/users/{{$user->id}}/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
             </div>

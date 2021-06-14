@@ -2,9 +2,12 @@
 
 @section('content')
 
-{!! Form::open() !!}
+{!! Form::open(['url' => '/users/update']) !!}
 
 <img src="images/dawn.png" id="profile-icon"></img>
+
+{{ Form::hidden('id',$user->id) }}
+
 {{ Form::label('UserName') }}
 {{ Form::text('username',$user['username'],['class' => 'input']) }}
 <br>
@@ -18,7 +21,7 @@
 {{ Form::text('passwordConfirm',null,['class' => 'input']) }}
 <br>
 {{ Form::label('Bio') }}
-{{ Form::textarea('bio',null,['class' => 'input']) }}
+{{ Form::textarea('bio',$user['bio'],['class' => 'input']) }}
 <br>
 {{ Form::label('Icon Image') }}
 {{ Form::file('images') }}
