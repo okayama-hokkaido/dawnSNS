@@ -4,7 +4,7 @@
 
 {!! Form::open(['url' => '/users/update']) !!}
 
-<img src="images/dawn.png" id="profile-icon"></img>
+<img src="images/{{$user['images']}}"></img>
 
 {{ Form::hidden('id',$user->id) }}
 
@@ -15,7 +15,7 @@
 {{ Form::text('mail',$user['mail'],['class' => 'input']) }}
 <br>
 {{ Form::label('Password') }}
-{{ Form::text('password',$user['password'],['readonly']) }}
+{{ Form::text('password','●●●●●●●●',['readonly']) }}
 <br>
 {{ Form::label('new Password') }}
 {{ Form::text('passwordConfirm',null,['class' => 'input']) }}

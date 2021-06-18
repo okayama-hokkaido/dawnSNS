@@ -22,12 +22,10 @@ class UsersController extends Controller
     public function profileUpdate(Request $request){
         $id = $request->input('id');
         $user = \App\User::find($id);
-
         $user['username'] = $request['username'];
         $user['mail'] = $request['mail'];
-
         if($request->filled('passwordConfirm')){
-        $user['password'] = $request['passwordConfirm'];
+        $user['password'] = bcrypt($request['passwordConfirm']);
         }
         if($request->filled('bio')){
         $user['bio'] = $request['bio'];

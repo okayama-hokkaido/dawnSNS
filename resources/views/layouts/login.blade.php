@@ -29,7 +29,7 @@
                 <div>
                 <ul class="acdn-content">
                     <li"><a href="/top">HOME</a></li>
-                    <li><a href="/users/{{$user->id}}/profile">プロフィール編集</a></li>
+                    <li><a href="/profile">プロフィール編集</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
             </div>
