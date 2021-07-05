@@ -32,7 +32,7 @@ class UsersController extends Controller
         }
 
         /* 写真の更新については後日 */
-        // if(isset($request['images'])){
+        // if($request->hasFile('images')){
         // $user['images'] = $request['images'];
         // }
         $user->save();

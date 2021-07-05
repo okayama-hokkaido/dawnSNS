@@ -32,6 +32,8 @@ Route::get('/added', 'Auth\RegisterController@added');
 //ログイン中のページ
 Route::get('/top','PostsController@index');
 
+Route::get('/index','PostsController@store');
+
 Route::get('/profile','UsersController@profile');
 Route::post('/users/update','UsersController@profileUpdate');
 

@@ -2,7 +2,7 @@
 
 @section('content')
 
-{!! Form::open(['url' => '/users/update']) !!}
+{!! Form::open(['url' => '/users/update','enctype'=>'multipart/form-data']) !!}
 
 <img src="images/{{$user['images']}}"></img>
 
