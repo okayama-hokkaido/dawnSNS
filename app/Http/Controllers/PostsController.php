@@ -16,15 +16,17 @@ class PostsController extends Controller
     //
     public function index(Request $request){
         $user=Auth::user();
-        return view('posts.index', ['user' => $user]);
+        $posts=\DB::table('posts')
+        ->get();
+        return view('posts.index', ['user' => $user,'posts' => $posts]);
     }
 
     public function store(Request $request){
-        $data = [
-            'user_id' => $request['id'],
-            'post'=> $request['post']
-        ];
-        dd($data);
-        view('posts.index');
+        $post = new Post();
+        $post->user_id = Auth::user()->id;
+        $post->posts = $request->posts;
+        $post->save();
+
+        return redirect('/top');
     }
 }
